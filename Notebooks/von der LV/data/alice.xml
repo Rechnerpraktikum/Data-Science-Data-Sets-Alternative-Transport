@@ -1,0 +1,9 @@
+<customer id="10" active="true">
+    <firstname>Alice</firstname>
+    <lastname>Doe</lastname>
+   
+    <shipping_addresses>
+      <address home = "true"><street>Wonderland 1</street><zip>4711</zip><city>Vienna</city><country>Austria</country></address>
+      <address><street>Welthandelsplatz 1</street><zip>1020</zip><city>Vienna</city><country>Austria</country></address>
+      <address><street>MickeyMouseStreet10</street><zip>12345</zip><city>Entenhausen</city><country>Germany</country></address>
+</customer>
