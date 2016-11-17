@@ -1,0 +1,61 @@
+Hi,
+
+sounds like a very interesting project :)
+
+i used the following code for computing the distance (air line) between two lat/long points
+Better estimation - incooperating the distance to the mensa
+##Get Mensa coordinates The mensa building is D1 and we get the coordinats from the All main entrances at WU Vienna dataset (http://data.wu.ac.at/dataset/entrances/resource/f92ecfd9-3f0a-4dfd-b6ff-1b0acf0b5340)
+In [70]:
+
+mensa_lat=48.21330080810941
+mensa_long=16.409165877046618
+
+import math
+
+#from http://www.johndcook.com/blog/python_longitude_latitude/
+def distance_on_unit_sphere(lat1, long1, lat2, long2):
+
+   # Convert latitude and longitude to
+   # spherical coordinates in radians.
+   degrees_to_radians = math.pi/180.0
+
+   # phi = 90 - latitude
+   phi1 = (90.0 - lat1)*degrees_to_radians
+   phi2 = (90.0 - lat2)*degrees_to_radians
+
+   # theta = longitude
+   theta1 = long1*degrees_to_radians
+   theta2 = long2*degrees_to_radians
+
+   # Compute spherical distance from spherical coordinates.
+
+   # For two locations in spherical coordinates
+   # (1, theta, phi) and (1, theta', phi')
+   # cosine( arc length ) =
+   #    sin phi sin phi' cos(theta-theta') + cos phi cos phi'
+   # distance = rho * arc length
+
+   cos = (math.sin(phi1)*math.sin(phi2)*math.cos(theta1 - theta2) +
+          math.cos(phi1)*math.cos(phi2))
+   arc = math.acos( cos )
+
+   # Remember to multiply arc by the radius of the earth
+   # in your favorite set of units to get length.
+
+   #convert to meters by multiplying it with 6373*1000
+   m = arc*6373*1000
+
+   #add additional 100m to cater for walking up and down in buildings
+   return (m + 100)
+
+and running it
+#distance_on_unit_sphere(48.213301, 16.409166, mensa_lat, mensa_long)
+
+there is also a stack overflow report: http://stackoverflow.com/questions/15736995/how-can-i-quickly-estimate-the-distance-between-two-latitude-longitude-points
+and a python package which might be helpful
+https://pypi.python.org/pypi/geopy/1.11.0
+
+i hope this helps, please contact us again if there are any further question or help required.
+
+best
+ jürgen 

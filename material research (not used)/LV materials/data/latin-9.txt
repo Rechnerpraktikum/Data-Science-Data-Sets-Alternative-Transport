@@ -1,0 +1,8 @@
+¤ This is the Euro symbol, which was introduced in ISO 8859-15...
+
+Here's what the German wikipedia says about ISO 8859-15:
+"ISO 8859-15 beinhaltet im Gegensatz zu ISO 8859-1 das Eurozeichen sowie alle Sonderzeichen der französischen, estnischen und finnischen Sprache".
+
+see: https://de.wikipedia.org/wiki/ISO_8859-15
+
+BTW, ½ is also a new character in Latin-9, not yet present in Latin-1, according to wikipedia.
