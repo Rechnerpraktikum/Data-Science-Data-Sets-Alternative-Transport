@@ -1,9 +1,0 @@
-{  "id": 10,
-    "firstname": "Alice",
-    "lastname": "Doe",
-    "active": true,
-    "shipping_addresses":
-    [ { "street": "Wonderland 1", "zip": 4711, "city": "Vienna", "country": "Austria", "home": true },
-        { "street": "Welthandelsplatz 1", "zip": 1020, "city": "Vienna", "country": "Austria" },
-        { "street": "MickeyMouseStreet10", "zip": 12345, "city": "Entenhausen", "country": "Germany" } ]
-}
